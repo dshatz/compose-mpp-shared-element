@@ -69,14 +69,14 @@ kotlin {
 }
 
 android {
-    namespace = "com.mxalbert.sharedelements"
+    namespace = "com.dshatz.sharedelements"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 24
         targetSdk = 34
 
-        applicationId = "com.mxalbert.sharedelements"
+        applicationId = "com.dshatz.sharedelements"
         versionCode = 1
         versionName = "1.0.0"
     }
@@ -98,17 +98,16 @@ android {
 
 compose.desktop {
     application {
-        mainClass = "com.mxalbert.sharedelements.MainKt"
+        mainClass = "com.dshatz.sharedelements.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb, TargetFormat.Rpm)
-            packageName = "com.mxalbert.sharedelements"
+            packageName = "com.dshatz.sharedelements"
             packageVersion = "1.0.0"
         }
     }
 }
 
-/*
-compose.experimental {
+/*compose.experimental {
     web.application {}
 }*/

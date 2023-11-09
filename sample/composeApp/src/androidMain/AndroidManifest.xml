@@ -6,7 +6,7 @@
         android:label="Shared Element Transition Compose"
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
         <activity
-            android:name=".DemoActivity"
+            android:name="com.dshatz.sharedelements.DemoActivity"
             android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
             android:launchMode="singleInstance"
             android:windowSoftInputMode="adjustPan"

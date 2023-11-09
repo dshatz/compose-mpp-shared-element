@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.multiplatform)
     alias(libs.plugins.compose)
     alias(libs.plugins.android.library)
+    id("maven-publish")
 }
 
 kotlin {
@@ -71,7 +72,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.mxalbert.sharedelements"
+    namespace = "com.dshatz.sharedelements"
     compileSdk = 34
 
     defaultConfig {
@@ -90,5 +91,20 @@ android {
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.3"
+    }
+}
+
+group = "com.dshatz.sharedelements"
+version = "0.1.1"
+
+publishing {
+    repositories {
+        maven {
+            setUrl("https://maven.pkg.github.com/dshatz/compose-mpp-shared-element")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+            }
+        }
     }
 }
