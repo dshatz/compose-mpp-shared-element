@@ -7,7 +7,7 @@ jobs:
   build-gradle-project:
     env:
       GITHUB_TOKEN: ${{ secrets.TOKEN }}
-      USERNAME: shatz.dan@gmail.com
+      USERNAME: dshatz
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project sources
