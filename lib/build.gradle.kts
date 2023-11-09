@@ -14,6 +14,7 @@ kotlin {
                 jvmTarget = "17"
             }
         }
+        publishLibraryVariants("release", "debug")
     }
 
     jvm()
@@ -95,7 +96,7 @@ android {
 }
 
 group = "com.dshatz.sharedelements"
-version = "0.1.1"
+version = "1.0-beta01"
 
 publishing {
     repositories {

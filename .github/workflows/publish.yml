@@ -6,7 +6,7 @@ on:
 jobs:
   build-gradle-project:
     env:
-      GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      GITHUB_TOKEN: ${{ github.token }}
       USERNAME: dshatz
     runs-on: ubuntu-latest
     steps:
