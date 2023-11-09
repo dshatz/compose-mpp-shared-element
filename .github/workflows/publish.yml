@@ -5,6 +5,9 @@ on:
 
 jobs:
   build-gradle-project:
+    env:
+      GITHUB_TOKEN: ${{ secrets.TOKEN }}
+      USERNAME: shatz.dan@gmail.com
     runs-on: ubuntu-latest
     steps:
       - name: Checkout project sources
@@ -16,6 +19,6 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v2
       - name: Run build with Gradle Wrapper
-        run: ./gradlew build
+        run: ./gradlew lib:generatePomFileForKotlinMultiplatformPublication
       - name: Publish artifacts
         run: ./gradlew publish

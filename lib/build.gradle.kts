@@ -103,7 +103,7 @@ publishing {
             setUrl("https://maven.pkg.github.com/dshatz/compose-mpp-shared-element")
             credentials {
                 username = project.findProperty("gpr.user") as String? ?: System.getenv("USERNAME")
-                password = project.findProperty("gpr.key") as String? ?: System.getenv("TOKEN")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
             }
         }
     }
